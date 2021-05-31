@@ -21,12 +21,12 @@ router.post('/notes', ({body}, res) => {
 
 router.delete('/notes/:id', (req, res) => {
    const id = req.params.id;
-   const newDb = db.filter(id => {});
-
-   // fs.writeFileSync('db/db.json', JSON.stringify(db));
-
-   // res.json(newDb);
    
+   const filteredResult = db.filter(() => {});
+
+   fs.writeFileSync('db/db.json', JSON.stringify(filteredResult));
+   
+   res.json(filteredResult);
 });
 
 module.exports = router;
