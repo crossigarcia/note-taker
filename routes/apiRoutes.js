@@ -19,14 +19,21 @@ router.post('/notes', ({body}, res) => {
 
 });
 
-router.delete('/notes/:id', (req, res) => {
-   const id = req.params.id;
+// router.delete('/notes/:id', (req, res) => {
+//    const id = req.params.id;
    
-   const filteredResult = db.filter(() => {});
+//    const filteredResult = db.filter((id) => {
+//       // if (id !== db.id) {
+//       //    res.status(400).json({ error: 'No note matchin that id'});
+//       //    return;
+//       // } else {
+//       //    fs.writeFileSync("db/db.json", JSON.stringify(filteredResult));
 
-   fs.writeFileSync('db/db.json', JSON.stringify(filteredResult));
-   
-   res.json(filteredResult);
-});
+//       //    res.json(filteredResult);
+//       // }
+      
+//    });
+
+// });
 
 module.exports = router;
